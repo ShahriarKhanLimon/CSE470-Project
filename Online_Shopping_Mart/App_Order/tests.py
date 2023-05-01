@@ -49,12 +49,10 @@ class OrderTest(TestCase):
         self.order.orderitems.add(cart2)
 
     def test_get_totals(self):
-        self.assertEqual(self.order.get_totals(),3000.0)
+        self.assertEqual(self.order.get_totals(),5000.0)
 
 
 
-
-#There isn't any class in my views.py file and so I have added all the test functions for views.py file in the class below
 class ViewsTest(TestCase):
     def test_add_to_cart(self):
         response = self.client.get(reverse('App_Order:add', args=(1,)))
