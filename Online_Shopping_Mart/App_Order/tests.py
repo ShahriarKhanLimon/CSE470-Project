@@ -14,16 +14,16 @@ class CartTest(TestCase):
         user.save()
         category=Category(title="shirt")
         category.save()
-        item = Product(name="Cotton White Casual Shirt", price=1000, category = category)
+        item = Product(name="Black T shirt", price=500, category = category)
         item.save()
         self.cart = Cart(user=user, item =item, quantity=3)
         self.cart.save()
 
     def test__str__(self):
-        self.assertEqual(self.cart.__str__(),"3 X Cotton White Casual Shirt")
+        self.assertEqual(self.cart.__str__(),"3 X Black T shirt")
 
     def test_get_total(self):
-        self.assertEqual(self.cart.get_total(),'3000.00')
+        self.assertEqual(self.cart.get_total(),'1500.00')
 
 
 
@@ -35,9 +35,9 @@ class OrderTest(TestCase):
         user.save()
         category=Category(title="shirt")
         category.save()
-        item1 = Product(name="Cotton White Casual Shirt", price=1000, category = category)
+        item1 = Product(name="Black T shirt", price=500, category = category)
         item1.save()
-        item2 = Product(name="Cotton Black Formal Shirt", price=2000, category = category)
+        item2 = Product(name="White T shirt", price=1000, category = category)
         item2.save()
         cart1 = Cart(user=user, item =item1, quantity=3)
         cart1.save()
@@ -49,7 +49,7 @@ class OrderTest(TestCase):
         self.order.orderitems.add(cart2)
 
     def test_get_totals(self):
-        self.assertEqual(self.order.get_totals(),4000.0)
+        self.assertEqual(self.order.get_totals(),2000.0)
 
 
 
