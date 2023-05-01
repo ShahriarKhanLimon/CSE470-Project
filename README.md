@@ -7,7 +7,7 @@ using Django
 
 Added 4 tests file.
 There ase in 
-App_Login\tests.py
-App_Order\tests.py 
-App_Payment\tests.py 
+App_Login\tests.py,
+App_Order\tests.py, 
+App_Payment\tests.py, 
 App_Shop\tests.py
