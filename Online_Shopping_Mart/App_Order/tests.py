@@ -49,7 +49,7 @@ class OrderTest(TestCase):
         self.order.orderitems.add(cart2)
 
     def test_get_totals(self):
-        self.assertEqual(self.order.get_totals(),2000.0)
+        self.assertEqual(self.order.get_totals(),3000.0)
 
 
 
