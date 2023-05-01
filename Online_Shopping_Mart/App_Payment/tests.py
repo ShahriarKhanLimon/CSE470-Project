@@ -11,7 +11,7 @@ from App_Payment.forms import BillingForm
 #Testing models classes
 class BillingAddressTest(TestCase):
     def setUp(self) -> None:
-        user = User(email="1239@gmail.com")
+        user = User(email="1234@gmail.com")
         user.save()
         profile = Profile(username="Shahriar")
         self.billingAddress=BillingAddress(user=user)
