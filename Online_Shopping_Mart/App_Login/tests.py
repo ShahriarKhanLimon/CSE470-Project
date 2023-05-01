@@ -11,7 +11,7 @@ from App_Login.forms import ProfileForm,SignUpForm
 #Testing for models classes
 class UserManagerTests(TestCase):
     def test_create_user(self):
-        user = User.objects._create_user('shahriarkhan530@gmail.com', 'abcd1234')
+        user = User.objects._create_user('shahriarkhan530@gmail.com', '1234abcd')
         self.assertTrue(isinstance(user, User))
 
     def test_create_superuser(self):
