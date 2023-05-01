@@ -10,13 +10,33 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <title>{% block title_block %} Online Shopping Mart {% endblock %}</title>
-
+    
+    
     <style>
-      body {
-        background-color: lightblue;
+      .bg-dark {
+        background-color: #000000!important;
       }
+      body {
+        margin: 3px;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #343a40;
+        text-align: left;
+        background-color: #cccccc;
+      }
+      
+      a {
+        color: #f0f5f9;
+        text-decoration: none;
+        background-color: transparent;
+      }
+
       .card {
-        height: 350px;
+        height: 400px;
+        color: #46b124;
+        background-color: #212236;
       }
 
       .card-product:after {
@@ -30,11 +50,11 @@
       }
 
       .card-product .price-old {
-        color: #999;
+        color: #c4c709;
       }
 
       .card-product .img-wrap {
-        border-radius: 3px 3px 0 0;
+        border-radius: 3px 4px 0 0;
         overflow: hidden;
         position: relative;
         height: 220px;
@@ -50,7 +70,7 @@
       .card-product .info-wrap {
         overflow: hidden;
         padding: 15px;
-        border-top: 1px solid #eee;
+        border-top: 1px solid #999;
       }
 
       .card-product .action-wrap {
@@ -60,7 +80,7 @@
 
       .card-product .bottom-wrap {
         padding: 15px;
-        border-top: 1px solid #eee;
+        border-top: 1px solid #c4c709;
       }
 
       .card-product .title {
